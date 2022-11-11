@@ -1,0 +1,288 @@
+/* Navbar container */
+.app-body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Arial;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(82, 82, 82);
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.hamburger {
+  padding: 10px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: rgb(43, 43, 43);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(234, 234, 234);
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.backgroundImg {
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 00px;
+  z-index: -1;
+}
+
+.dropdownTree {
+  width: 25px;
+}
+
+.gift-guide-header {
+  background-color: rgb(18, 18, 18);
+  padding: 50px 0;
+  position: relative;
+}
+
+.gift-guides {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Libre Bodoni", sans-serif;
+  font-size: 35px;
+}
+
+#topNav {
+  width: 100%;
+  height: 35px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+
+.for{
+  width: 100px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.468);
+  transition: all 500ms ease-in-out;
+}
+
+.for:hover {
+  background-color: rgba(229, 247, 253, 0.431);
+  border: 2px solid lightblue;
+  color: lightblue;
+
+}
+
+#topNav a {
+  padding: 10px 30px 10px 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: White;
+}
+
+#topNav a:hover {
+  background-color: lightgray;
+}
+
+.topNavBackground {
+  text-align: center;
+  width: 100%;
+}
+
+.my-wishlists {
+  color: rgb(0, 56, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 35px;
+  font-family: "Libre Bodoni", sans-serif;
+  font-size: 54px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

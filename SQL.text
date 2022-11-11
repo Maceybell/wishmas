@@ -1,0 +1,206 @@
+CREATE TABLE gifts ( gifts_id SERIAL PRIMARY KEY, gift_name VARCHAR(200), image_url VARCHAR, category VARCHAR (200), price INT, description VARCHAR, web_link VARCHAR );
+
+CREATE TABLE wishlists (wishlists_id SERIAL PRIMARY KEY, wishlists_name VARCHAR (255));
+
+CREATE TABLE gift_wishlists ( 
+    gift_wishlists_id SERIAL PRIMARY KEY, 
+    gifts_id INT REFERENCES gifts(gifts_id),
+    wishlists_id INT REFERENCES wishlists(wishlists_id) );
+
+    INSERT INTO gifts (gift_name, image_url, category, price, description, web_link)
+    VALUES (
+        'Lululemon Everywhere Fleece Belt Bag', 
+        'https://images.lululemon.com/is/image/lululemon/LU9B18S_045657_1?wid=750&op_usm=0.8,1,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
+        'For Her', 
+        60, 
+        'Phone, keys, wallet. Keep them close in this versatile belt bag that helps you get out the door and on to your next adventure.',
+        'https://shop.lululemon.com/p/bags/Everywhere-Fleece-Belt-Bag/_/prod10740117?color=0001&sz=ONESIZE'
+        ),
+    (
+        'Lululemon Align™ Tank Top', 
+        'https://images.lululemon.com/is/image/lululemon/LW1DUVS_034204_1?wid=750&op_usm=0.8,1,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72', 
+        'For Her', 
+        70, 
+        'When feeling nothing is everything. The lululemon Align™ collection, powered by Nulu™ fabric, is so weightless and buttery soft, all you feel is your practice.',
+        'https://shop.lululemon.com/p/women-tanks/Align-Tank/_/prod9600539'
+    ),
+    (
+        'Abbott Lyon Initial Choker', 
+        'https://cdn.shopify.com/s/files/1/0645/0072/8061/products/InitialChokerNecklace_1700x1920_crop_center.jpg?v=1653655564',
+        'For Her',
+        110,
+        'With a range of chains, colors and styles to choose from, our iconic Name Jewelry collection enables you to create the ultimate signature accessory or gift. These exclusive pieces are handmade to order, so are totally unique to you. Our statement choker-style curb chain features the personalized initials of your choice, so that you can create a stunning bespoke necklace that''s all about you or someone special.',
+        'https://us.abbottlyon.com/products/initial-choker-gold?currency=USD&utm_medium=cpc&utm_source=google&utm_campaign=Google%20Shopping&utm_source=google&utm_medium=cpc&utm_campaign=18863858294&utm_content=142937686523&utm_term=&gadid=634197105771&gclid=Cj0KCQiA37KbBhDgARIsAIzce17xW9TUepsEFtbw8bYBdeDnkg8FjFQGdikU7lHG8Sy3d4A6sSGgBgEaAm67EALw_wcB'
+
+    ), 
+    (
+        'Alo Yoga Gold Rush Puffer', 
+        'https://cdn.shopify.com/s/files/1/2185/2813/products/W4380R_03808_b2_s1_a1_m100_780e6c2d-5bca-4909-a5c9-721060d4fba2_750x.jpg?v=1666294089',
+         'For Her',
+        140,
+        'We love the cinched bottom on this luxe, cold-weather puffer — it keeps your core toasty by locking in heat from the waist up. A hidden interior zipper & side-entry, zippered pockets keep you & your stuff secure.',
+        'https://www.aloyoga.com/products/w4380r-gold-rush-puffer-black'
+    ),
+    (
+        'Minky Couture Sorbet Atlantic Air Blanket',
+        'https://cdn.shopify.com/s/files/1/0054/5043/2598/products/pastelsorbetcollectionA_38414e39-09c2-4068-865b-88dc312c6ff5_x370.progressive.jpg?v=1666293548',
+        'For Her',
+        240,
+        'Our silky smooth Sorbet style minky blanket in a grayish mist color is a beautiful color for young and old alike. Sorbet Atlantic Air is a Minky Couture mid-weight pattern blanket. Mid-weight blankets have shorter minky threads that create a silky feel. This blanket has a grayish mist plush minky on both sides with no ruffle.',
+        'https://www.softminkyblankets.com/products/sorbet-atlantic-air'
+    ),
+    (
+        'Prada CANDY Eau de Parfum',
+        'https://www.sephora.com/productimages/sku/s1361930-main-zoom.jpg?imwidth=612',
+        'For Her',
+        100,
+        'Rethink reality with Prada CANDY Eau de Parfum, a joyful olfactory balance merging caramel accord with warm benzoin resin inside a cloud of white musk. A jolt to the system, this perfume triggers bugs of spontaneity in the software of life to open up exhilarating spaces of re-imagined reality.',
+        'https://www.sephora.com/product/candy-P376127'
+
+    ),
+    (
+        'Lil Ghosts AirPods Pro Case by GMF Designs',
+        'https://cdn-image02.casetify.com/usr/4582/12454582/~v25/13087168x2_airpod-pro-2_16005281.png.1000x1000-w.m80.jpg',
+        'For Her',
+        40,
+        'According to the National Alliance on Mental Illness, 1 in 5 adults and 1 in 6 kids (aged 6-17) experience mental illness each year in the U.S. With those powerful numbers in mind, we teamed up with GMF Designs founder Gabby Frost on a collection to help raise awareness on the topic. Shop tech accessories decked out in Gabby''s colorful creations, so everywhere you go, you’ll have a supportive reminder that your brain needs as much love as your body.',
+        'https://www.casetify.com/product/lil-ghosts-airpods-pro-case-by-gmf-designs/airpod-pro-2/tpu-airpod-pro-case?artwork_name=lil-ghosts-airpods-pro-case-by-gmf-designs&device=airpod-pro-2&product=tpu-airpod-pro-case#/16005281'
+    ),
+    (
+        'Lego Succulents',
+        'http://www.brickfinder.net/wp-content/uploads/2022/04/LEGO-Botanical-collection-Succulent-10309.jpg',
+        'For Her',
+        50,
+        'Enjoy a rewarding building project, creating a succulents plant display to enhance your home or office decor.',
+        'https://www.lego.com/en-us/product/succulents-10309'
+    ),
+    (
+        'Better Than Yesterday Card Game',
+        'https://target.scene7.com/is/image/Target/GUEST_a8849aeb-f3be-4784-badd-31306deedf8f?wid=1000&hei=1000&qlt=80&fmt=webp',
+        'For Her',
+        25,
+        'Live Life To The Fullest: This challenge includes 365 cards with daily challenges to help push you out of your comfort zone and into something way cooler.',
+        'https://www.target.com/p/better-than-yesterday-card-game/-/A-86031095'
+    ),
+    ( 
+        'Faux Monstera Plant in Geo Ceramic Pot',
+        'https://www.worldmarket.com/category/home-decor-pillows/plant-shop.do?template=PLA-2&plfsku=607727',
+        'For Her',
+        35,
+        'An on-trend addition to any table or shelf, this fake Monstera deliciosa is expertly handcrafted to look just like the real thing. With faux Swiss-cheese leaves tumbling from a chic, geo-patterned pot, this artificial accent overflows with lush tropical beauty.',
+        'https://www.worldmarket.com/product/faux+monstera+plant+in+geo+ceramic+pot.do'
+
+    ),
+    (
+        'WoodWick Ellipse Scented Candle, Lavender Spa',
+        'https://m.media-amazon.com/images/I/81BuyPc8DCL._AC_SL1500_.jpg',
+        'For Her',
+        30,
+        'The patented Hearthwick Flame wooden wick creates a long, dancing flame and distinctive crackle for a sophisticated fireside feel',
+        'https://www.amazon.com/WoodWick-Lavender-HearthWick-Candle-Purple/dp/B07DHRJH9L'
+    ),
+    (
+        'Frost Bowie Knife with Frostwood Handle',
+        'https://www.knifecountryusa.com/store/image/products/magnified/220232_220236.jpg',
+        'For Him',
+        20,
+        'Model - F18316FW. Bowie Frostwood. 16 inch overall. 10 inch satin finish stainless clip point blade. Frostwood handle. Stainless guard. Full tang. Lanyard hole. Black nylon belt sheath. Boxed.',
+        'https://www.knifecountryusa.com/store/product/220232.220236/frost-18316fw-bowie-knife-with-frostwood-handle.html'
+    ),
+    (
+        'ABC Jogger Warpstream',
+        'https://images.lululemon.com/is/image/lululemon/LM5AOLS_033928_1?wid=750&op_usm=0.8,1,10,0&fmt=webp&qlt=80,1&fit=constrain,0&op_sharpen=0&resMode=sharp2&iccEmbed=0&printRes=72',
+        'For Him',
+        130,
+        'Incredible stretch. Dries fast. Repels wrinkles. Holds its shape.',
+        'https://shop.lululemon.com/p/men-joggers/Abc-Jogger/_/prod8530240?color=32476&sz=M'
+
+    ),
+    (
+        'Steam Deck Gaming Console',
+        'https://cdn.cloudflare.steamstatic.com/steamdeck/images/hardware-accssories.jpg',
+        'For Him',
+        400,
+        'Steam Deck brings the Steam games and features you love to a powerful and convenient form factor that you can take wherever you go.',
+        'https://store.steampowered.com/steamdeck'
+    ),
+    (
+        'CamelBak Rogue Light 7 L Hydration Pack',
+        'https://www.rei.com/media/be9eaffb-afed-4538-9d08-8fdcc78ec504?size=784x588',
+        'For Him',
+        80,
+        'Delivering everything you crave for a trail day—minimal design, durable materials and a cooling, comfortable feel—the men''s CamelBak Rogue Light hydration pack is ready to get out and explore.',
+        'https://www.rei.com/product/185763/camelbak-rogue-light-7-l-hydration-pack-mens'
+    ),
+    (
+        'Men''s Classic Retro-X® Fleece Jacket',
+        'https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwb5971a53/images/hi-res/23056_NAT.jpg?sw=1275&sh=1275&sfrm=png&q=95&bgcolor=f5f5f5',
+        'For Him',
+        230,
+        'A warm and windproof 100% polyester (50%-85% recycled) bonded ¼"-pile fleece jacket for cool, blustery weather. Fair Trade Certified™ sewn.',
+        'https://www.patagonia.com/product/mens-classic-retro-x-fleece-jacket/23056.html'
+    ), 
+    (
+        'Stance Graphed Maliboo Stocking Set',
+        'https://www.stance.com/dw/image/v2/BGWC_PRD/on/demandware.static/-/Sites-GlobalProductCatalog/default/dwc1f78538/images/products/MVBGRAPHEDSETSER.jpg?sw=800&sh=800',
+        'For Him',
+        60,
+        'AN ATTENTION-GRABBING ASSORTMENT OF FADED PASTEL GREEN AND BLUE DESIGNS, OUR GRAPHED MALIBOO SET FEATURES THREE SEPARATE AESTHETICS TO MATCH WHATEVER YOUR MOOD MAY BE.',
+        'https://www.stance.com/graphed-maliboo-stocking-set/MVBGRAPHEDSET.html?dwvar_MVBGRAPHEDSET_color=Multi%20-%20Serape%20Stocking'
+    ),
+    (
+        'Clearwater® 6-Piece Fly Rod',
+        'https://assets.orvis.com/is/image/orvisprd/2S699VFAlt1_W?wid=1024&src=is($object$:1-1)',
+        'For Him',
+        250,
+        'With a rod tube at just 22½"L, it easily fits into a duffle, pack, or under the car seat—now there''s no reason to ever be without a fly rod when you find yourself at water'' s edge.',
+        'https://www.orvis.com/clearwater-6-piece-fly-rod/21MA-Family.html'
+    ),
+    (
+        'Sense of Wood 2022 Collection Gift Box',
+        'https://cdn.shopify.com/s/files/1/0272/7778/7272/products/2021GiftBox-1_2000x.jpg?v=1636741955',
+        'For Him',
+        70,
+        'The perfect way to gift Scents of Wood - or experience it for the first time.',
+        'https://scentsofwood.com/products/2021-collection-gift-box'
+    ),
+    (
+        'Selkirk Amped S2 Pickleball Paddle',
+        'https://cdn.shopify.com/s/files/1/0152/5763/2822/products/s2_mid_red_ffbcb02d-2fa1-4193-b8eb-5c5dd5c1e5a9.jpg?v=1652155738',
+        'For Him',
+        150,
+        'The S2 paddle continues the tradition of a standard shape, yet it boasts the largest surface area of all of our paddles. The S2 was the brainchild of US Open Silver Medalist, Tony Tollenaar. With a shorter handle than the Epic, the S2 has a larger surface area on the face of the paddle. In fact, the S2 has the largest sweet spot in the Pickleball industry. The extra large surface area improves the overall power and control of the paddle, giving every shot more consistency.',
+        'https://www.selkirk.com/collections/paddles/products/amped-s2?variant=39638404563046'
+    ),
+    (
+        'SteelSeries - Arctis Pro Wired DTS Headphone',
+        'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6204/6204513_sd.jpg;maxHeight=640;maxWidth=550',
+        'For Him',
+        135,
+        'Take your in-game audio seriously with this SteelSeries Arctis Pro gaming headset. Its high-resolution speaker drivers with neodymium magnets produce dynamic audio details at 10Hz - 40kHz, and its ski-goggle headband and AirWeave ear cushions provide long-lasting comfort. The ClearCast microphone of this SteelSeries Arctis Pro gaming headset filters out background noise for high-clarity voice chats.',
+        'https://www.bestbuy.com/site/steelseries-arctis-pro-wired-dts-headphonex-v2-0-gaming-headset-for-pc-ps5-and-ps4-black/6204513.p?skuId=6204513'
+    ),
+    (
+        'Nintendo Switch Lite',
+        'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/bo_15px_solid_white/f_auto/q_auto/dpr_1.0/c_scale,w_700/ncom/en_US/products/hardware/nintendo-switch-lite-blue-112385/112385-nintendo-switch-lite-blue-package-front-1200x675',
+        'For Teens',
+        200,
+        'The Nintendo Switch Lite system is a small and light system at a great price. With a built-in +Control Pad, and a sleek, unibody design, this system is great for on-the-go gaming.',
+        'https://www.nintendo.com/store/products/nintendo-switch-lite-turquoise/'
+    ),
+    (
+        'Hot Wheels Track Builder Unlimited Multi-Lane Speed Box',
+        'https://res.cloudinary.com/mattel-dtc-cloud/image/upload/w_540,h_540,c_pad/shop-us-prod/products/phmebltkrlyccxzne4sq.jpg?v=1663273160',
+        'For Kids',
+        25,
+        'Make anything in your house a gravity drop with the Hot Wheels Track Builder Multi-Lane Speed Box. Clamp the lid to any table, chair or shelf and use the 4-lane fair start gate to kick off the race! Turn the box over and use the 4-lane jump on the bottom as an awesome finishing stunt.',
+        'https://shop.mattel.com/products/hot-wheels-track-builder-unlimited-multi-lane-speed-box-glc95' 
+    ),
+    (
+        'KONG® Easy Treat™ Dog Treat - Peanut Butter',
+        'https://s7d2.scene7.com/is/image/PetSmart/5067156?$CLEARjpg$',
+        'Fur Them',
+        10,
+        'Delight your dog at treat time with KONG Peanut Butter Easy Treat Paste. This no-mess treat is highly digestible and delicious, and features a nozzle that easily controls the amount of treat you serve. This makes it super convenient and a no-mess proposition when stuffing in your dog''s KONG Toy.',
+        'https://www.petsmart.com/featured-brands/kong/dog/kong-easy-treatandtrade-dog-treat---peanut-butter-10885.html?cgid=5000057&fmethod=Browse'
+    );
