@@ -286,3 +286,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+
+.giftImage {
+  max-height: 300px;
+}
