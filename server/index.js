@@ -8,8 +8,8 @@ app.use(express.json())
 app.use(cors())
 const {SERVER_PORT} = process.env
 
-const {getGiftGuide
-
+const {
+    getGiftGuide, createGiftItem, addWishItem, getWishItems, deleteItem
 } = require('./controller.js')
 
 app.get('/',(req, res) => {
@@ -18,10 +18,19 @@ app.get('/',(req, res) => {
 app.get('/gift-guides',(req, res) => {
     res.sendFile(path.join(__dirname, '../public/gift-guides'))
 })
+app.get('/my-wishlists',(req, res) => {
+    res.sendFile(path.join(__dirname, '../public/my-wishlists'))
+})
+
+
 app.get('/giftGuide/:category', getGiftGuide)
 app.get('/text', (req, res) => {
     res.send('endpoint hit')
 })
+app.get('/wishlist', getWishItems)
+app.post('/wishlist', createGiftItem )
+app.post('/addWishItem/:id', addWishItem )
+app.delete('/wishlist/:id', deleteItem)
 
 
 

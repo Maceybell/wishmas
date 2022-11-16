@@ -1,41 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link href="https://fonts.cdnfonts.com/css/libre-bodoni" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link href="https://fonts.cdnfonts.com/css/libre-bodoni" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body background = "">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body background="">
     <header>
-        <div class="navbar">
-            <div class="dropdown">
-              <button class="dropbtn"> 
-                <i class="fa fa-caret-down"><label for="check">
-                    <img class = "dropdownTree" src="https://banner2.cleanpng.com/20180419/pfw/kisspng-hamburger-button-drop-down-list-computer-icons-navigation-bars-and-page-menu-templates-5ad8a08e2cb5a8.3451233315241463181831.jpg" alt=""> 
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </label></i>
-              </button>
-              <div class="dropdown-content">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="fa fa-caret-down"
+              ><label for="check">
+                <img
+                  class="dropdownTree"
+                  src="https://banner2.cleanpng.com/20180419/pfw/kisspng-hamburger-button-drop-down-list-computer-icons-navigation-bars-and-page-menu-templates-5ad8a08e2cb5a8.3451233315241463181831.jpg"
+                  alt=""
+                />
+                <span></span>
+                <span></span>
+                <span></span> </label
+            ></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./home.html">Home</a>
+            <a href="./gift-guides.html">Gift Guides</a>
+            <a href="./my-wishlists.html">My Wishlists</a>
+            <a href="./gift-generator.html">Gift Generator</a>
+          </div>
+        </div>
+      </div>
 
-                <a href="/home.html">Home</a>
-                <a href="/gift-guides.html">Gift Guides</a>
-                <a href="/my-wishlists.html">My Wishlists</a>
-                <a href="/gift-generator.html">Gift Generator</a>
-              </div>
+      <div class="my-wishlists">MY CHRISTMAS LIST</div>
+    </header>
+    <div class="background">
+      <img
+        class="backgroundImg"
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/50b30576-612e-40db-acfd-227295aaf3ce/d17epxm-b157ca83-1901-4d12-970d-3c7f6f0a2c4c.jpg/v1/fill/w_1131,h_707,q_70,strp/the_5th_anniversary_daytime02_by_hybridworks_d17epxm-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTIwMCIsInBhdGgiOiJcL2ZcLzUwYjMwNTc2LTYxMmUtNDBkYi1hY2ZkLTIyNzI5NWFhZjNjZVwvZDE3ZXB4bS1iMTU3Y2E4My0xOTAxLTRkMTItOTcwZC0zYzdmNmYwYTJjNGMuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.XxXcmG4irSGy-IDQyqIGThHyE5qoXhbDB5CgHx6zotc"
+        alt=""
+      />
+    </div>
+    <section class="display-wishlist"></section>
+    <br />
+    <br />
+    <footer>
+      <div class="container">
+        <h1 class="container-title">Add Custom Items</h1>
+        <br />
+        <form class ="custom" action="/action_page.php">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Item Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="ex: Acer Nitro 5 Gaming Laptop"
+              />
             </div>
           </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Image URL</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Copy and Paste the Image Address Here"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="price">Price</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="price"
+                name="lastname"
+                placeholder="What is the price of this item? You can round up."
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="link">Web Link</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="link"
+                name="lastname"
+                placeholder="Enter the link to the website where this item may be purchased."
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25"> 
+              <label for="subject">Item Description</label>
+            </div>
+            <div class="col-75">
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Include some information about the item..."
+                style="height: 200px"
+              ></textarea>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </footer>
 
-        <div class = "my-wishlists">MY WISHLISTS</div>
-    </header>
-    <div class ="background"> <img class ="backgroundImg" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/50b30576-612e-40db-acfd-227295aaf3ce/d17epxm-b157ca83-1901-4d12-970d-3c7f6f0a2c4c.jpg/v1/fill/w_1131,h_707,q_70,strp/the_5th_anniversary_daytime02_by_hybridworks_d17epxm-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTIwMCIsInBhdGgiOiJcL2ZcLzUwYjMwNTc2LTYxMmUtNDBkYi1hY2ZkLTIyNzI5NWFhZjNjZVwvZDE3ZXB4bS1iMTU3Y2E4My0xOTAxLTRkMTItOTcwZC0zYzdmNmYwYTJjNGMuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.XxXcmG4irSGy-IDQyqIGThHyE5qoXhbDB5CgHx6zotc" alt=""></div>
-
-
-
-<script src="home.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>   
+    <script src="my-wishlist.js"></script>
+  </body>
 </html>
