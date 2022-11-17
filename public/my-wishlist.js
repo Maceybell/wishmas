@@ -51,10 +51,7 @@ let deleteItem = (id) => {
 function handleSubmit(e) {
     e.preventDefault()
 
-    // if (isNan(priceInput.value)){
-    //      alert('Price must contain only numbers')   
-    //      return
-    // }
+  
 
     let body = {
          giftName: nameInput.value,
@@ -62,7 +59,7 @@ function handleSubmit(e) {
          price: priceInput.value, 
          webLink: linkInput.value, 
          description: itemDesc.value, 
-         // giftId: do I need this or will it automatically include this bc of the table format?
+         
     }
 
     axios.post('http://localhost:5500/wishlist', body)

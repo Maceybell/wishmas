@@ -1,0 +1,3 @@
+This project is a Christmas List building app to make Christmas Shopping easier and more fun. There is a gift guide page filtering gift ideas into different categories based upon who you are shopping for. These ideas can be added to a wishlist with the click of a button. Then if you navigate to the My Wishlists page, you will see any items added populating the page, as well as an option at the bottom of the page to add custom items to your Christmas List. Items on the page can be removed but items that were originally on the gift guide will remain there and can be added back again later or used as inspiration. 
+
+I used Heroku, Postgres, pgweb, JS, sequelize, and express to develop this web app. 

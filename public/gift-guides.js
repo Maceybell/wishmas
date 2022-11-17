@@ -6,20 +6,15 @@ let forFurBtn = document.querySelector(".fur");
 let wishlistBtn = document.querySelector(".wishlist")
 
 
-// let deleteBtn = document.querySelector(".remove")
 
 
 
 
 let filterGiftGuide = (event) => {
-  //let's get a reference to the element that was clicked
   let theButton = event.target;
-  //then, perhaps, there is an attritube on the element
   let category = theButton.getAttribute("category");
-  //that tells us our category
   console.log(category);
   display.innerHTML = ''
-// axios.get('http://localhost:5500/text').then(res => console.log(res.data))
   axios.get(`http://localhost:5500/giftGuide/${category}`)
   .then((res) => {
      console.log(res.data)
@@ -38,7 +33,6 @@ let filterGiftGuide = (event) => {
 };
 
 
-// I want the following function to add the chosen item to my wishlist page from this gift guide page. Is that a put post or get? Since this button is relted to items on another page should i just keep all JS front end here or should I go ahead and make a wishlist.js? What will make more sense and keep things more clear and organized but simple?
 
 
 
