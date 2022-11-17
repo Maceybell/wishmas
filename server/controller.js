@@ -42,12 +42,17 @@ module.exports = {
   },
 
   createGiftItem: (req, res) => {
-    const { giftName, imgURL, price, description, webLink, giftId } = req.body;
+    const { giftName, imgURL, price, description, webLink } = req.body;
     sequelize
       .query(
         `
-        INSERT INTO gifts (gift_name, image_url, price, description, web_link, gifts_id)
-        VALUES ('${giftName}', '${imgURL}', ${price}, '${description}', '${webLink}', ${giftId})
+        INSERT INTO gifts (gift_name, image_url, price, description, web_link)
+        VALUES ('${giftName}', '${imgURL}', ${price}, '${description}', '${webLink}');
+
+        INSERT INTO wishlist_items (item_id)
+        SELECT gifts_id
+        FROM gifts
+        WHERE gift_name = '${giftName}' ORDER BY gifts_id DESC LIMIT 1;
         `
       )
       .then((dbRes) => {
@@ -83,7 +88,10 @@ module.exports = {
     deleteItem: (req, res) => {
 
         const { id } = req.params
-        sequelize.query(`DELETE FROM wishlist_items WHERE ${id} = wishlist_items.item_id`)
+        sequelize.query(`DELETE FROM wishlist_items WHERE wishlist_items.item_id = ${+id};
+        DELETE FROM gifts WHERE category IS NULL and gifts_id = ${+id}`).then((dbRes) => {res.status(200).send('item successfully deleted from wishlist')})
 
-    }
+    },
+
+    
 };

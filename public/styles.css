@@ -294,7 +294,8 @@ table {
   height: 300px;
 }
 
-.giftImage:hover {
+.opcaity:hover {
+  opacity: 50%;
   transition: all 500ms ease-in-out;
 }
 
@@ -452,4 +453,13 @@ footer{
   background-color: rgba(121, 41, 41, 0.123);
   border: 2px solid rgb(41, 2, 2);
   color: rgb(47, 1, 1);
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  font-family: "Libre Bodoni", sans-serif;
+  font-size: 36px;
+  color:rgb(0, 18, 0)
 }

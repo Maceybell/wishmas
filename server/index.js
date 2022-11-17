@@ -21,8 +21,6 @@ app.get('/gift-guides',(req, res) => {
 app.get('/my-wishlists',(req, res) => {
     res.sendFile(path.join(__dirname, '../public/my-wishlists'))
 })
-
-
 app.get('/giftGuide/:category', getGiftGuide)
 app.get('/text', (req, res) => {
     res.send('endpoint hit')
