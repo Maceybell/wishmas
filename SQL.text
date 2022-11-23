@@ -203,7 +203,8 @@ CREATE TABLE gift_wishlists (
         10,
         'Delight your dog at treat time with KONG Peanut Butter Easy Treat Paste. This no-mess treat is highly digestible and delicious, and features a nozzle that easily controls the amount of treat you serve. This makes it super convenient and a no-mess proposition when stuffing in your dog''s KONG Toy.',
         'https://www.petsmart.com/featured-brands/kong/dog/kong-easy-treatandtrade-dog-treat---peanut-butter-10885.html?cgid=5000057&fmethod=Browse'
-    );
+    ),
+    ;
 
 
 
