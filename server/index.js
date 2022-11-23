@@ -8,9 +8,19 @@ app.use(express.json())
 app.use(cors())
 const {SERVER_PORT} = process.env
 
+const {home, myWishlists, myWishlistsJS, giftGuides, giftGuidesJS, giftGenerator, css} = require("./pageCtrl")
+
 const {
     getGiftGuide, createGiftItem, addWishItem, getWishItems, deleteItem
 } = require('./controller.js')
+
+app.get("/", home)
+app.get("/css", css)
+app.get("/mywishlists", myWishlists)
+app.get("/mywishlistsjs", myWishlistsJS)
+app.get("giftguides", giftGuides)
+app.get("giftguidesjs", giftGuidesJS)
+app.get("giftgenerator", giftGenerator)
 
 app.get('/',(req, res) => {
     res.sendFile(path.join(__dirname, '../public/home'))

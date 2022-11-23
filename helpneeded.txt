@@ -1,8 +1,0 @@
-
-my filterGiftGuide function is currently only actually displaying one item so I think there may be an issue with my forEach.
-
-I now need a get function that will display everything on my wishlist html page that has either been added from gift guides or has been added usinng the form.
-
-I am not sure whether to have just one js page with all my functions or a js page for each html page. The complication with that would be I have a button on my first html page that I want to push and have items added to a different html page and I am not sure how to do that. Maybe I need to do like a join or something with my wishlist table and gifts table.
-
-So I need that get function completed in order to create my post functions and my delete function. 
